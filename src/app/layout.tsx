@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { ProductProvider } from "@/hooks/useProductContext"
 
 import "../styles/index.scss"
 
@@ -18,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ProductProvider>{children}</ProductProvider>
+      </body>
     </html>
   )
 }
