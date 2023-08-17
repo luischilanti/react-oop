@@ -1,0 +1,12 @@
+{
+  "endOfLine": "lf",
+  "semi": false,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "importOrder": ["^react", "<THIRD_PARTY_MODULES>", "^assets/(.*)$", "^components/(.*)$", "^constants(.*)$", "^context/(.*)$", "^hooks/(.*)$", "^layout/(.*)$", "^services/(.*)$", "^utils/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true
+}
