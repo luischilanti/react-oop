@@ -5,8 +5,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "React OOP & NextJS",
-  description: "Proof of concept for React Object-Oriented Programming",
   applicationName: "React OOP & NextJS",
+  description: "Proof of concept for React Object-Oriented Programming",
 }
 
 export default function RootLayout({
