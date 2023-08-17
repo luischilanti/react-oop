@@ -24,6 +24,12 @@ export const useCreateProduct = ({ saveProduct }: useCreateProps) => {
 
     if (type.toString() === "imported")
       saveProduct(new ImportedProduct(type, name, price, fee))
+
+    setType("common")
+    setName("")
+    setPrice(0)
+    setFee(0)
+    setDiscount(0)
   }
 
   const changeSelectItem = (event: React.ChangeEvent<HTMLSelectElement>) => {
