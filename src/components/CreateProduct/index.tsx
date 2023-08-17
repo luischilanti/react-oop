@@ -48,7 +48,7 @@ const CreateProduct = () => {
         </>
       )}
 
-      <button type="submit">Cadastrar</button>
+      <button type="submit">Register</button>
     </form>
   )
 }
