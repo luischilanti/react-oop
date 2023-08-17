@@ -1,6 +1,12 @@
 import { useState } from "react"
 
-export const useCreateProduct = () => {
+import Product from "@/classes/Product"
+import UsedProduct from "@/classes/UsedProduct"
+import ImportedProduct from "@/classes/ImportedProduct"
+
+import { useCreateProps } from "./types"
+
+export const useCreateProduct = ({ saveProduct }: useCreateProps) => {
   const [type, setType] = useState<"common" | "imported" | "used">("common")
   const [name, setName] = useState("")
   const [price, setPrice] = useState(0)
@@ -9,6 +15,15 @@ export const useCreateProduct = () => {
 
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault()
+
+    if (type.toString() === "common")
+      saveProduct(new Product(type, name, price))
+
+    if (type.toString() === "used")
+      saveProduct(new UsedProduct(type, name, price, discount))
+
+    if (type.toString() === "imported")
+      saveProduct(new ImportedProduct(type, name, price, fee))
   }
 
   const changeSelectItem = (event: React.ChangeEvent<HTMLSelectElement>) => {

@@ -1,9 +1,13 @@
 "use client"
 
-import "./styles.scss"
 import { useCreateProduct } from "./hook"
+import { useProduct } from "@/hooks/useProductContext"
+
+import "./styles.scss"
 
 const CreateProduct = () => {
+  const { saveProduct } = useProduct()
+
   const {
     discount,
     fee,
@@ -13,7 +17,7 @@ const CreateProduct = () => {
     handleSubmit,
     changeSelectItem,
     changeInput,
-  } = useCreateProduct()
+  } = useCreateProduct({ saveProduct })
 
   return (
     <form className="form" onSubmit={handleSubmit}>
